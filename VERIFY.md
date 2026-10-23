@@ -58,8 +58,19 @@ node scripts/e2e-settings.mjs --base http://127.0.0.1:59007 --token <token>
 
 Result: **PASS** — tab and all three installed cards rendered from the npm artifact. `package.json` dependency is `0.1.1`, `node_modules/dsh-preview-market/package.json` reports `0.1.1`.
 
+## One-click install e2e (fixture registry, 2026-10-23)
+
+To exercise the real install route without waiting for the production catalog, a local registry fixture was served on `127.0.0.1:59008`:
+
+```json
+{"plugins":[{"name":"dsh-preview-stl","url":"https://github.com/439436269-ctrl/dsh-preview-stl","npm":"dsh-preview-stl","category":["ui"]}]}
+```
+
+The host was started with `DSHM_REGISTRY_URL=http://127.0.0.1:59008/plugins.json`, `dsh-preview-stl` was removed from `preview-test`, and the market's STL card was clicked. Result: **PASS** — dshmarket installed `dsh-preview-stl@0.1.0`; `/dsh-market/installed` contained it, the notice said `已安装: dsh-preview-stl`, and the card switched to `已是最新` with `停用`/`配置`. No page errors. Screenshot: `%TEMP%\market-oneclick.png`.
+
+This proves the install route itself; the production catalog still needs the entries scheduled for 2026-10-24.
+
 ## Not yet verified live
 
-- One-click install through dsh-market (requires the new packages in its curated registry; the market entries are scheduled for 2026-10-24).
-
-This is the next check after the new market entries are accepted.
+- Production one-click install through the real dsh-market catalog (the new entries are scheduled for 2026-10-24).
+- Desktop installation (the desktop profile is Electron-managed).

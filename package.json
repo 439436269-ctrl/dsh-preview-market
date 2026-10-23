@@ -1,6 +1,6 @@
 {
   "name": "dsh-preview-market",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Vertical preview market for DeepSeek Harness: discover, install and configure preview plugins (media, Blender, STL, ...) from one panel.",
   "type": "module",
   "license": "MIT",

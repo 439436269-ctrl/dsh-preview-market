@@ -71,7 +71,8 @@ try {
     installed: /已安装|Installed/.test(text),
     media: text.includes("dsh-preview-media"),
     blender: text.includes("dsh-preview-blender"),
-    stl: text.includes("dsh-preview-stl")
+    stl: text.includes("dsh-preview-stl"),
+    snip: text.includes("dsh-preview-snip")
   };
   const failed = Object.entries(checks).filter(([, ok]) => !ok);
   console.log("checks", JSON.stringify(checks));

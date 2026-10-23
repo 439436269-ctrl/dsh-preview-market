@@ -29,13 +29,15 @@ The filename must match the repository URL: `https://github.com/<owner>/<repo>` 
 }
 ```
 
-Required: `name`, `npm`, `capability`, `kind`, `repo`, `version`, `extensions`, `formats`, `description.zh`, `description.en`.
+Required: `name`, `npm`, `capability`, `kind`, `repo`, `version`, `description.zh`, `description.en`.
 
-Optional: `minDsh`, `requires` (defaults to `[]`).
+Required for preview kinds (`media`, `three`): `extensions` (non-empty), `formats`.
 
-- `kind` is currently `media` or `three`; `three` entries get the shared WebGL viewport.
-- `extensions` drives the document-preview registration in the child plugin; the catalog only displays it.
-- `formats` groups extensions for the card, e.g. `{ "video": [...], "audio": [...] }`.
+Optional: `minDsh`, `requires` (defaults to `[]`). `tool` entries omit `extensions` and `formats`; the loader normalizes them to `[]` / `{}`.
+
+- `kind` is `media`, `three`, or `tool`; `three` entries get the shared WebGL viewport, `tool` entries are preview enhancements with no file extensions.
+- `extensions` drives the document-preview registration in the child plugin; the catalog only displays it. It is required for preview kinds and omitted for `tool`.
+- `formats` groups extensions for the card, e.g. `{ "video": [...], "audio": [...] }`. Also omitted for `tool`.
 
 ## Submit a plugin
 

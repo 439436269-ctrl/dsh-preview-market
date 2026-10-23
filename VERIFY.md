@@ -1,4 +1,4 @@
-# Verification record — dsh-preview-market 0.1.3
+# Verification record — dsh-preview-market 0.1.4
 
 ## Unit tests (2026-10-23)
 
@@ -7,7 +7,7 @@
 | File | Covers |
 |---|---|
 | `test/config.test.js` | defaults, `/api` route fence, route normalization, boolean normalization |
-| `test/catalog.test.js` | one file per entry, required fields, filename/repository match, duplicates, payload shape |
+| `test/catalog.test.js` | one file per entry, preview/tool schema, filename/repository match, duplicates, payload shape |
 | `test/catalog-file.test.js` | `catalog.json` snapshot matches the files |
 | `test/installed.test.js` | profile `package.json` + `node_modules` inventory, missing profile, `profileContext` resolution |
 | `test/client.test.js` | bundle registers the `settings.section` and `settings.plugins.tab` entries |
@@ -32,7 +32,7 @@
 node scripts/e2e-section.mjs --base http://127.0.0.1:59010 --token <token>
 ```
 
-Result: **PASS** — the Settings nav contains `预览市场` immediately after `插件市场`; opening it shows the `发现` / `已安装` tabs and the three catalog cards (`dsh-preview-media`, `dsh-preview-blender`, `dsh-preview-stl`). No page errors. Screenshot: `docs/preview-market-section.png`.
+Result: **PASS** — the Settings nav contains `预览市场` immediately after `插件市场`; opening it shows the `发现` / `已安装` tabs and the four catalog cards (`dsh-preview-media`, `dsh-preview-blender`, `dsh-preview-stl`, and the `kind: "tool"` entry `dsh-preview-snip`). No page errors. Screenshot: `docs/preview-market-section.png`.
 
 ## Settings tab e2e (2026-10-23, preview-test)
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- Catalog entries can now be `kind: "tool"` (preview enhancements with no file extensions); `dsh-preview-snip` is the first one.
+- Cards show `Type: Tool` instead of a formats line for tool entries; install/toggle/configure stay the same.
+
 ## 0.1.3
 
 - Catalog entries now live in `catalog/plugins/<owner>__<repo>.json` — one file per plugin, so third parties can submit a PR without editing market code.

@@ -7,7 +7,7 @@ import { CATALOG, CATALOG_SCHEMA, catalogPayload } from "../lib/catalog.js";
 const PLUGIN_DIR = fileURLToPath(new URL("../catalog/plugins/", import.meta.url));
 
 test("the first-party preview plugins are present", () => {
-  for (const name of ["dsh-preview-media", "dsh-preview-blender", "dsh-preview-stl"]) {
+  for (const name of ["dsh-preview-media", "dsh-preview-blender", "dsh-preview-stl", "dsh-preview-snip"]) {
     assert.ok(CATALOG.some((entry) => entry.name === name), `${name} missing`);
   }
   assert.equal(CATALOG_SCHEMA, 1);
@@ -19,11 +19,16 @@ test("every entry has the fields the market renders and validates", () => {
     assert.match(entry.npm, /^[a-z0-9][a-z0-9-]*$/);
     assert.match(entry.repo, /^https:\/\/github\.com\//);
     assert.equal(typeof entry.kind, "string");
-    assert.ok(Array.isArray(entry.extensions) && entry.extensions.length > 0);
+    assert.ok(Array.isArray(entry.extensions));
     assert.ok(Array.isArray(entry.requires));
     assert.equal(typeof entry.version, "string");
     assert.equal(typeof entry.description.zh, "string");
     assert.equal(typeof entry.description.en, "string");
+    if (entry.kind === "tool") {
+      assert.equal(entry.extensions.length, 0);
+    } else {
+      assert.ok(entry.extensions.length > 0);
+    }
   }
 });
 

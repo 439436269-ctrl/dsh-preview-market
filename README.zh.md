@@ -23,7 +23,7 @@ dsh plugin --profile <profile> add dsh-preview-market
 - **安装/更新** — 检测到 dsh-market 时委托给它；没有时显示可复制的 `dsh plugin --profile <profile> add <包>@<版本>` 命令。
 - **独立插件** — media、Blender、STL 仍是独立包；本页不注册渲染器，也不合并它们的代码。
 
-## 目录（0.1.3）
+## 目录（0.1.4）
 
 每个插件是 [`catalog/plugins/`](catalog/plugins/) 下的**一个文件**，命名为 `<owner>__<repo>.json`。三方收录只需新增一个文件 + 重新生成 `catalog.json`，不用改市场代码；Host 启动时读取、校验并合并全部文件。字段与 PR 步骤见 [`catalog/README.md`](catalog/README.md)。
 
@@ -32,6 +32,7 @@ dsh plugin --profile <profile> add dsh-preview-market
 | `dsh-preview-media` | mp4/mov/webm/mkv + mp3/flac/wav/… | — |
 | `dsh-preview-blender` | `.blend` | Blender 3.6+ |
 | `dsh-preview-stl` | `.stl` | — |
+| `dsh-preview-snip` | 工具：图片/PDF 圈选或引用选中 | — |
 
 ## 配置
 
@@ -59,4 +60,4 @@ node --test test/*.test.js
 
 ## 状态
 
-`0.1.3` — 顶层「设置 → 预览市场」+ 发现/已安装两个 tab，同时保留「设置 → 插件」里的入口。目录改为 `catalog/plugins/` 下一插件一文件，三方收录只需一个文件 PR。启用/停用走 dsh-market；一键安装要求对应包已进入所连接 dsh-market 的 registry，否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。
+`0.1.4` — 顶层「设置 → 预览市场」+ 发现/已安装两个 tab，同时保留「设置 → 插件」里的入口。目录改为 `catalog/plugins/` 下一插件一文件，支持预览插件和 `kind: "tool"` 的增强工具（如预览圈选），三方收录只需一个文件 PR。启用/停用走 dsh-market；一键安装要求对应包已进入所连接 dsh-market 的 registry，否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。

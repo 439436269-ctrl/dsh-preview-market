@@ -1,0 +1,70 @@
+{
+  "name": "dsh-preview-market",
+  "version": "0.1.0",
+  "description": "Vertical preview market for DeepSeek Harness: discover, install and configure preview plugins (media, Blender, STL, ...) from one panel.",
+  "type": "module",
+  "license": "MIT",
+  "author": "439436269-ctrl",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "preview",
+    "market",
+    "catalog"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "VERIFY.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible",
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/439436269-ctrl/dsh-preview-market.git"
+  },
+  "homepage": "https://github.com/439436269-ctrl/dsh-preview-market#readme",
+  "bugs": {
+    "url": "https://github.com/439436269-ctrl/dsh-preview-market/issues"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

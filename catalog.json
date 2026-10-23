@@ -2,6 +2,30 @@
   "schema": 1,
   "plugins": [
     {
+      "name": "dsh-preview-blender",
+      "npm": "dsh-preview-blender",
+      "capability": "blender",
+      "kind": "three",
+      "repo": "https://github.com/439436269-ctrl/dsh-preview-blender",
+      "version": "0.1.0",
+      "minDsh": "0.2.0-rc.2",
+      "requires": [
+        "blender"
+      ],
+      "extensions": [
+        "blend"
+      ],
+      "formats": {
+        "model": [
+          "blend"
+        ]
+      },
+      "description": {
+        "zh": "Blender 场景：headless 导出缓存 GLB，右侧栏 WebGL 视口 + 对象/三角面/mm 包围盒/材质统计。",
+        "en": "Blender scenes: a cached headless GLB export rendered in a WebGL viewport, with object, triangle, mm-bounds and material statistics."
+      }
+    },
+    {
       "name": "dsh-preview-media",
       "npm": "dsh-preview-media",
       "capability": "media",
@@ -71,30 +95,6 @@
       "description": {
         "zh": "视频与音频：右侧栏原生播放器，HTTP Range 流式读取，桌面端可拖动进度。",
         "en": "Video and audio in the right-Sidebar document preview, streamed with HTTP Range and seekable in the desktop app."
-      }
-    },
-    {
-      "name": "dsh-preview-blender",
-      "npm": "dsh-preview-blender",
-      "capability": "blender",
-      "kind": "three",
-      "repo": "https://github.com/439436269-ctrl/dsh-preview-blender",
-      "version": "0.1.0",
-      "minDsh": "0.2.0-rc.2",
-      "requires": [
-        "blender"
-      ],
-      "extensions": [
-        "blend"
-      ],
-      "formats": {
-        "model": [
-          "blend"
-        ]
-      },
-      "description": {
-        "zh": "Blender 场景：headless 导出缓存 GLB，右侧栏 WebGL 视口 + 对象/三角面/mm 包围盒/材质统计。",
-        "en": "Blender scenes: a cached headless GLB export rendered in a WebGL viewport, with object, triangle, mm-bounds and material statistics."
       }
     },
     {

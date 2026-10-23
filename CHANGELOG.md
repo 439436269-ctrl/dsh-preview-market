@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Catalog entries now live in `catalog/plugins/<owner>__<repo>.json` — one file per plugin, so third parties can submit a PR without editing market code.
+- The Host loads, validates and merges every file at startup; duplicate names and filename/repository mismatches fail fast.
+- `catalog.json` remains the generated machine-readable snapshot; a test keeps it in sync.
+
 ## 0.1.2
 
 - Add a top-level **Settings → Preview market** section, next to dsh-market, with Discover / Installed tabs.

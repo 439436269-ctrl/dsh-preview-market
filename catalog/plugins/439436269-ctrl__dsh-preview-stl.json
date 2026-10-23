@@ -1,0 +1,22 @@
+{
+  "name": "dsh-preview-stl",
+  "npm": "dsh-preview-stl",
+  "capability": "stl",
+  "kind": "three",
+  "repo": "https://github.com/439436269-ctrl/dsh-preview-stl",
+  "version": "0.1.0",
+  "minDsh": "0.2.0-rc.2",
+  "requires": [],
+  "extensions": [
+    "stl"
+  ],
+  "formats": {
+    "model": [
+      "stl"
+    ]
+  },
+  "description": {
+    "zh": "STL 网格：浏览器解析二进制/ASCII，右侧栏 WebGL 视口 + 尺寸/体积/表面积/水密统计。",
+    "en": "STL meshes: binary/ASCII parsed in the browser, with a WebGL viewport and size, volume, surface-area and watertightness statistics."
+  }
+}

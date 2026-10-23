@@ -1,0 +1,24 @@
+{
+  "name": "dsh-preview-blender",
+  "npm": "dsh-preview-blender",
+  "capability": "blender",
+  "kind": "three",
+  "repo": "https://github.com/439436269-ctrl/dsh-preview-blender",
+  "version": "0.1.0",
+  "minDsh": "0.2.0-rc.2",
+  "requires": [
+    "blender"
+  ],
+  "extensions": [
+    "blend"
+  ],
+  "formats": {
+    "model": [
+      "blend"
+    ]
+  },
+  "description": {
+    "zh": "Blender 场景：headless 导出缓存 GLB，右侧栏 WebGL 视口 + 对象/三角面/mm 包围盒/材质统计。",
+    "en": "Blender scenes: a cached headless GLB export rendered in a WebGL viewport, with object, triangle, mm-bounds and material statistics."
+  }
+}

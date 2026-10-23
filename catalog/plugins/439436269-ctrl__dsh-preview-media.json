@@ -1,0 +1,72 @@
+{
+  "name": "dsh-preview-media",
+  "npm": "dsh-preview-media",
+  "capability": "media",
+  "kind": "media",
+  "repo": "https://github.com/439436269-ctrl/dsh-preview-media",
+  "version": "0.1.4",
+  "minDsh": "0.2.0-rc.2",
+  "requires": [],
+  "extensions": [
+    "mp4",
+    "m4v",
+    "mov",
+    "webm",
+    "ogv",
+    "ogg",
+    "mkv",
+    "avi",
+    "wmv",
+    "flv",
+    "3gp",
+    "ts",
+    "m2ts",
+    "mts",
+    "mp3",
+    "wav",
+    "flac",
+    "m4a",
+    "aac",
+    "oga",
+    "opus",
+    "weba",
+    "wma",
+    "aiff",
+    "aif"
+  ],
+  "formats": {
+    "video": [
+      "mp4",
+      "m4v",
+      "mov",
+      "webm",
+      "ogv",
+      "ogg",
+      "mkv",
+      "avi",
+      "wmv",
+      "flv",
+      "3gp",
+      "ts",
+      "m2ts",
+      "mts"
+    ],
+    "audio": [
+      "mp3",
+      "wav",
+      "flac",
+      "m4a",
+      "aac",
+      "oga",
+      "opus",
+      "weba",
+      "wma",
+      "aiff",
+      "aif"
+    ]
+  },
+  "description": {
+    "zh": "视频与音频：右侧栏原生播放器，HTTP Range 流式读取，桌面端可拖动进度。",
+    "en": "Video and audio in the right-Sidebar document preview, streamed with HTTP Range and seekable in the desktop app."
+  }
+}

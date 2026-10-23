@@ -1,15 +1,16 @@
-# Verification record — dsh-preview-market 0.1.2
+# Verification record — dsh-preview-market 0.1.3
 
 ## Unit tests (2026-10-23)
 
-`node --test test/*.test.js` → **10 pass, 0 fail**.
+`node --test test/*.test.js` → **12 pass, 0 fail**.
 
 | File | Covers |
 |---|---|
 | `test/config.test.js` | defaults, `/api` route fence, route normalization, boolean normalization |
-| `test/catalog.test.js` | three catalog entries, required fields, payload shape |
+| `test/catalog.test.js` | one file per entry, required fields, filename/repository match, duplicates, payload shape |
+| `test/catalog-file.test.js` | `catalog.json` snapshot matches the files |
 | `test/installed.test.js` | profile `package.json` + `node_modules` inventory, missing profile, `profileContext` resolution |
-| `test/client.test.js` | bundle registers exactly one `settings.plugins.tab` entry with id `dsh-preview-market` |
+| `test/client.test.js` | bundle registers the `settings.section` and `settings.plugins.tab` entries |
 
 ## Host / bundle smoke (2026-10-23, preview-test profile)
 
@@ -17,6 +18,13 @@
 - `dsh --profile preview-test --dump-config` contains one `id: preview-market` row with `routeRoot: /api/preview-market`.
 - The Web boot graph (`__DSH_BOOT__`) contains `dsh-preview-market` and injects `__DSH_PREVIEW_MARKET_CONFIG__`.
 - The combo bundle URL returned **200** (16,213 B) and contains `settings.plugins.tab` + `dsh-preview-market`.
+
+## One-file catalog (2026-10-23)
+
+- Moved the three entries from `lib/catalog.js` into `catalog/plugins/<owner>__<repo>.json`; the Host loads and validates every file at startup.
+- Added a temporary `catalog/plugins/example__dsh-preview-example.json`; `CATALOG` went from 3 to 4 entries without any code change, then was removed.
+- Unit tests (12 pass) validate every file, the filename/repository match, duplicate names, required fields, and the `catalog.json` snapshot.
+- `catalog/README.md` + `.github/PULL_REQUEST_TEMPLATE.md` document the one-file PR.
 
 ## Top-level section e2e (2026-10-23, preview-test)
 

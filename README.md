@@ -12,14 +12,16 @@ dsh plugin --profile <profile> add dsh-preview-market
 
 Open **Settings → Plugins → Preview market**.
 
+Upgrading from `dsh-media-preview` / `dsh-blend-preview` / `dsh-stl-preview`? See [MIGRATION.md](MIGRATION.md).
+
 ## What it does
 
 - **Catalog** — first-party preview plugins with their formats, host requirements and versions.
-- **Installed view** — reads the active profile's `package.json` and each package's `dsh.preview` manifest; never imports child plugin code.
+- **Installed view** — reads the active profile's `package.json`, matching catalog names by default and honouring a package's `dsh.preview` manifest when present; never imports child plugin code.
 - **Install / update** — delegates to `dsh-market` when it is present. Without it, the card shows the exact `dsh plugin --profile <profile> add <package>@<version>` command to copy.
 - **Independent plugins** — media, Blender and STL remain separate packages; this page has no renderer and does not merge their code.
 
-## Catalog (0.1.0)
+## Catalog (0.1.1)
 
 | Package | Formats | Host requirement |
 |---|---|---|

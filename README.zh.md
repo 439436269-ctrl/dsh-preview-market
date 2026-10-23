@@ -12,10 +12,12 @@ dsh plugin --profile <profile> add dsh-preview-market
 
 打开 **设置 → 插件 → 预览市场**。
 
+从 `dsh-media-preview` / `dsh-blend-preview` / `dsh-stl-preview` 升级？见 [MIGRATION.md](MIGRATION.md)。
+
 ## 功能
 
 - **目录** — 第一方预览插件及其格式、宿主依赖、版本。
-- **已安装** — 读当前 profile 的 `package.json` 与各包的 `dsh.preview` 清单，不 import 子插件代码。
+- **已安装** — 读当前 profile 的 `package.json`，默认按目录名匹配；包内声明 `dsh.preview` 清单时也认。不 import 子插件代码。
 - **安装/更新** — 检测到 dsh-market 时委托给它；没有时显示可复制的 `dsh plugin --profile <profile> add <包>@<版本>` 命令。
 - **独立插件** — media、Blender、STL 仍是独立包；本页不注册渲染器，也不合并它们的代码。
 

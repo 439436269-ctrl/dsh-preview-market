@@ -48,6 +48,16 @@ node scripts/e2e-toggle.mjs --base http://127.0.0.1:59006 --token <token>
 
 Result: **PASS** — the STL card showed `停用`; clicking it wrote `dsh-preview-stl` into `/dsh-market/installed`'s `disabled` list and showed `已切换，刷新页面后生效`; clicking `启用` removed it again. The media card's `配置` showed `在 设置 → 插件 → dsh-preview-media 配置。` No page errors; screenshot: `%TEMP%\dsh-preview-market-toggle.png`.
 
+## npm artifact install (2026-10-23, preview-test)
+
+Replaced the local tarball with the published `dsh-preview-market@0.1.1` from npm (`dsh plugin --profile preview-test add dsh-preview-market@0.1.1`), then ran the settings e2e against that install:
+
+```sh
+node scripts/e2e-settings.mjs --base http://127.0.0.1:59007 --token <token>
+```
+
+Result: **PASS** — tab and all three installed cards rendered from the npm artifact. `package.json` dependency is `0.1.1`, `node_modules/dsh-preview-market/package.json` reports `0.1.1`.
+
 ## Not yet verified live
 
 - One-click install through dsh-market (requires the new packages in its curated registry; the market entries are scheduled for 2026-10-24).

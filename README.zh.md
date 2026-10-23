@@ -4,13 +4,15 @@
 
 它不是通用插件市场，也不自己实现预览：每个预览插件仍是独立的 Loader 条目，有自己的仓库、版本和设置；市场只提供目录、已安装视图和入口。
 
+![设置里的预览市场](https://raw.githubusercontent.com/439436269-ctrl/dsh-preview-market/main/docs/preview-market-section.png)
+
 ## 安装
 
 ```sh
 dsh plugin --profile <profile> add dsh-preview-market
 ```
 
-打开 **设置 → 插件 → 预览市场**。
+打开 **设置 → 预览市场**（同一个面板也在 **设置 → 插件** 下）。
 
 从 `dsh-media-preview` / `dsh-blend-preview` / `dsh-stl-preview` 升级？见 [MIGRATION.md](MIGRATION.md)。
 
@@ -21,7 +23,7 @@ dsh plugin --profile <profile> add dsh-preview-market
 - **安装/更新** — 检测到 dsh-market 时委托给它；没有时显示可复制的 `dsh plugin --profile <profile> add <包>@<版本>` 命令。
 - **独立插件** — media、Blender、STL 仍是独立包；本页不注册渲染器，也不合并它们的代码。
 
-## 目录（0.1.1）
+## 目录（0.1.2）
 
 | 包 | 格式 | 宿主依赖 |
 |---|---|---|
@@ -40,6 +42,11 @@ dsh plugin --profile <profile> add dsh-preview-market
 | `profileDir` | `""` | 要检查的 profile；空则用 Host `profileContext`，再退到 `$DSH_HOME/profiles/desktop`。 |
 | `debug` | `false` | 预留的请求诊断。 |
 
+## 示例
+
+- [`examples/profile-overrides.yml`](examples/profile-overrides.yml)：按 profile 覆盖媒体分块、Blender 路径、STL 单位。
+- [`catalog.json`](catalog.json)：目录的机器可读快照，单测会检查它与代码一致。
+
 ## 开发
 
 ```sh
@@ -50,4 +57,4 @@ node --test test/*.test.js
 
 ## 状态
 
-`0.1.1` — 目录 + 已安装清单 + 设置页 + 通过 dsh-market 启用/停用。一键安装要求对应包已进入所连接 dsh-market 的 registry；否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。
+`0.1.2` — 顶层「设置 → 预览市场」+ 发现/已安装两个 tab，同时保留「设置 → 插件」里的入口。启用/停用走 dsh-market；一键安装要求对应包已进入所连接 dsh-market 的 registry，否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。

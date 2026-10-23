@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 
-test("the bundle registers one Settings → Plugins tab", async () => {
+test("the bundle registers a Settings section and the Plugins tab", async () => {
   const source = await readFile(new URL("../lib/client.js", import.meta.url), "utf8");
   let registration;
   const captured = [];
@@ -45,8 +45,7 @@ test("the bundle registers one Settings → Plugins tab", async () => {
       return () => {};
     },
     slots: {
-      inject: (name, fn) => {
-        assert.equal(name, "settings.plugins.tab");
+      inject: (_name, fn) => {
         fn();
       },
       register: (spec) => {
@@ -56,8 +55,11 @@ test("the bundle registers one Settings → Plugins tab", async () => {
     }
   };
   module.apply(ctx);
-  assert.equal(captured.length, 1);
-  assert.equal(captured[0].name, "settings.plugins.tab");
-  assert.equal(captured[0].id, "dsh-preview-market");
-  assert.equal(typeof captured[0].label(), "string");
+  assert.equal(captured.length, 2);
+  const section = captured.find((spec) => spec.name === "settings.section");
+  const tab = captured.find((spec) => spec.name === "settings.plugins.tab");
+  assert.equal(section?.id, "preview-market");
+  assert.equal(tab?.id, "dsh-preview-market");
+  assert.equal(typeof section?.label(), "string");
+  assert.equal(typeof tab?.label(), "string");
 });

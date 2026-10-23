@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Add a top-level **Settings → Preview market** section, next to dsh-market, with Discover / Installed tabs.
+- Keep the Settings → Plugins tab for discoverability; both render the same panel.
+
 ## 0.1.1
 
 - Enable/disable installed preview plugins from the market when dsh-market is present (`/dsh-market/toggle`), with the current state read from `/dsh-market/installed`.

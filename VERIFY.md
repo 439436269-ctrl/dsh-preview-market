@@ -1,4 +1,4 @@
-# Verification record — dsh-preview-market 0.1.1
+# Verification record — dsh-preview-market 0.1.2
 
 ## Unit tests (2026-10-23)
 
@@ -17,6 +17,14 @@
 - `dsh --profile preview-test --dump-config` contains one `id: preview-market` row with `routeRoot: /api/preview-market`.
 - The Web boot graph (`__DSH_BOOT__`) contains `dsh-preview-market` and injects `__DSH_PREVIEW_MARKET_CONFIG__`.
 - The combo bundle URL returned **200** (16,213 B) and contains `settings.plugins.tab` + `dsh-preview-market`.
+
+## Top-level section e2e (2026-10-23, preview-test)
+
+```sh
+node scripts/e2e-section.mjs --base http://127.0.0.1:59010 --token <token>
+```
+
+Result: **PASS** — the Settings nav contains `预览市场` immediately after `插件市场`; opening it shows the `发现` / `已安装` tabs and the three catalog cards (`dsh-preview-media`, `dsh-preview-blender`, `dsh-preview-stl`). No page errors. Screenshot: `docs/preview-market-section.png`.
 
 ## Settings tab e2e (2026-10-23, preview-test)
 

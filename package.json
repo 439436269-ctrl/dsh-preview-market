@@ -1,6 +1,6 @@
 {
   "name": "dsh-preview-market",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vertical preview market for DeepSeek Harness: discover, install and configure preview plugins (media, Blender, STL, ...) from one panel.",
   "type": "module",
   "license": "MIT",
@@ -21,6 +21,7 @@
   },
   "files": [
     "lib/**/*.js",
+    "catalog.json",
     "cordis.patch.yml",
     "README.md",
     "README.zh.md",
@@ -66,7 +67,9 @@
   },
   "scripts": {
     "test": "node --test test/*.test.js",
+    "catalog:write": "node scripts/write-catalog.mjs",
     "e2e": "node scripts/e2e-settings.mjs",
+    "e2e:section": "node scripts/e2e-section.mjs",
     "e2e:fallback": "node scripts/e2e-fallback.mjs",
     "e2e:toggle": "node scripts/e2e-toggle.mjs"
   }

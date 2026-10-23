@@ -26,7 +26,7 @@ Install `dsh-preview-media`, `dsh-preview-blender` and `dsh-preview-stl` (and op
 dsh plugin --profile <profile> add dsh-preview-media@0.1.4
 dsh plugin --profile <profile> add dsh-preview-blender@0.1.0
 dsh plugin --profile <profile> add dsh-preview-stl@0.1.0
-dsh plugin --profile <profile> add dsh-preview-market@0.1.1
+dsh plugin --profile <profile> add dsh-preview-market@0.1.2
 ```
 
 The CLI form only works for profiles it owns (not the Electron-managed `desktop` profile).

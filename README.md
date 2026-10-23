@@ -44,6 +44,12 @@ Settings → Plugins → Preview market (namespace `preview-market`):
 node --test test/*.test.js
 ```
 
+Settings-tab end-to-end (requires a running host with the plugin installed):
+
+```sh
+node scripts/e2e-settings.mjs --base http://127.0.0.1:<port> --token <token>
+```
+
 The client bundle is `lib/client.js` (classic `__ModuleLoader__.load` factory, no build step).
 
 ## Status

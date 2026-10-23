@@ -28,9 +28,18 @@ node scripts/e2e-settings.mjs --base http://127.0.0.1:59003 --token <token>
 
 Result: **PASS** — opened Settings → Built-in plugins → Preview market and found the tab plus the three installed cards (`dsh-preview-media`, `dsh-preview-blender`, `dsh-preview-stl`). No page errors; the only console 404 is the expected `/dsh-market/status` probe when dsh-market is absent. Screenshot: `%TEMP%\dsh-preview-market-settings.png`.
 
+## Fallback install/copy e2e (2026-10-23, preview-test)
+
+Removed `dsh-preview-stl` from `preview-test`, restarted the host, and ran:
+
+```sh
+node scripts/e2e-fallback.mjs --base http://127.0.0.1:59004 --token <token>
+```
+
+Result: **PASS** — the STL card showed `安装`; clicking it displayed `dsh plugin --profile preview-test add dsh-preview-stl@0.1.0` (dsh-market absent); the media card's copy button reported `命令已复制` and the clipboard held `dsh plugin --profile preview-test add dsh-preview-media@0.1.4`. No page errors. STL was reinstalled afterwards.
+
 ## Not yet verified live
 
 - One-click install through dsh-market (requires the new packages in its curated registry; the market entries are scheduled for 2026-10-24).
-- Fallback command copy in a real browser.
 
-These are the next checks after the new market entries are accepted.
+This is the next check after the new market entries are accepted.

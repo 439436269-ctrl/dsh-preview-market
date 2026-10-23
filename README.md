@@ -50,6 +50,12 @@ Settings-tab end-to-end (requires a running host with the plugin installed):
 node scripts/e2e-settings.mjs --base http://127.0.0.1:<port> --token <token>
 ```
 
+Fallback install/copy check (requires a profile where one catalog entry is not installed):
+
+```sh
+node scripts/e2e-fallback.mjs --base http://127.0.0.1:<port> --token <token>
+```
+
 The client bundle is `lib/client.js` (classic `__ModuleLoader__.load` factory, no build step).
 
 ## Status

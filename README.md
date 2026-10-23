@@ -56,8 +56,14 @@ Fallback install/copy check (requires a profile where one catalog entry is not i
 node scripts/e2e-fallback.mjs --base http://127.0.0.1:<port> --token <token>
 ```
 
+Toggle/configure check (requires dsh-market and an installed STL preview):
+
+```sh
+node scripts/e2e-toggle.mjs --base http://127.0.0.1:<port> --token <token>
+```
+
 The client bundle is `lib/client.js` (classic `__ModuleLoader__.load` factory, no build step).
 
 ## Status
 
-`0.1.0` — catalog + installed inventory + settings tab. One-click install requires the package to be present in the connected dsh-market registry; otherwise use the copyable command. Enable/disable stays in **Settings → Plugins**.
+`0.1.1` — catalog + installed inventory + Settings → Plugins tab + enable/disable through dsh-market. One-click install requires the package to be present in the connected dsh-market registry; otherwise use the copyable command. Configuration stays in each child plugin's own Settings → Plugins page.

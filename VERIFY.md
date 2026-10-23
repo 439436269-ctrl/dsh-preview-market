@@ -1,4 +1,4 @@
-# Verification record — dsh-preview-market 0.1.0
+# Verification record — dsh-preview-market 0.1.1
 
 ## Unit tests (2026-10-23)
 
@@ -37,6 +37,16 @@ node scripts/e2e-fallback.mjs --base http://127.0.0.1:59004 --token <token>
 ```
 
 Result: **PASS** — the STL card showed `安装`; clicking it displayed `dsh plugin --profile preview-test add dsh-preview-stl@0.1.0` (dsh-market absent); the media card's copy button reported `命令已复制` and the clipboard held `dsh plugin --profile preview-test add dsh-preview-media@0.1.4`. No page errors. STL was reinstalled afterwards.
+
+## Toggle / configure e2e (2026-10-23, preview-test + dsh-market 1.67.0)
+
+With dsh-market installed, ran:
+
+```sh
+node scripts/e2e-toggle.mjs --base http://127.0.0.1:59006 --token <token>
+```
+
+Result: **PASS** — the STL card showed `停用`; clicking it wrote `dsh-preview-stl` into `/dsh-market/installed`'s `disabled` list and showed `已切换，刷新页面后生效`; clicking `启用` removed it again. The media card's `配置` showed `在 设置 → 插件 → dsh-preview-media 配置。` No page errors; screenshot: `%TEMP%\dsh-preview-market-toggle.png`.
 
 ## Not yet verified live
 

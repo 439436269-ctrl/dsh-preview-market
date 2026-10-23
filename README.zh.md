@@ -19,7 +19,7 @@ dsh plugin --profile <profile> add dsh-preview-market
 - **安装/更新** — 检测到 dsh-market 时委托给它；没有时显示可复制的 `dsh plugin --profile <profile> add <包>@<版本>` 命令。
 - **独立插件** — media、Blender、STL 仍是独立包；本页不注册渲染器，也不合并它们的代码。
 
-## 目录（0.1.0）
+## 目录（0.1.1）
 
 | 包 | 格式 | 宿主依赖 |
 |---|---|---|
@@ -48,4 +48,4 @@ node --test test/*.test.js
 
 ## 状态
 
-`0.1.0` — 目录 + 已安装清单 + 设置页。一键安装要求对应包已进入所连接 dsh-market 的 registry；否则用可复制命令。启用/停用仍在 **设置 → 插件**。
+`0.1.1` — 目录 + 已安装清单 + 设置页 + 通过 dsh-market 启用/停用。一键安装要求对应包已进入所连接 dsh-market 的 registry；否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Catalog version for `dsh-preview-media` follows the media transport fallback release `0.1.5`.
+
 ## 0.1.4
 
 - Catalog entries can now be `kind: "tool"` (preview enhancements with no file extensions); `dsh-preview-snip` is the first one.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6
+
+- README: add preview-market and per-plugin screenshots, plus the current four-entry catalog list (media, Blender, STL, snip).
+
 ## 0.1.5
 
 - Catalog version for `dsh-preview-media` follows the media transport fallback release `0.1.5`.

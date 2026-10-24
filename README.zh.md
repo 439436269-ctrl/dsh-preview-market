@@ -70,7 +70,7 @@ STL 在浏览器解析；视口给出尺寸、体积、表面积和水密性，�
 
 ![预览圈选](https://raw.githubusercontent.com/439436269-ctrl/dsh-preview-market/main/docs/preview-snip.png)
 
-## 目录（0.1.8）
+## 目录（0.1.9）
 
 每个插件是 [`catalog/plugins/`](catalog/plugins/) 下的**一个文件**，命名为 `<owner>__<repo>.json`。三方收录只需新增一个文件 + 重新生成 `catalog.json`，不用改市场代码；Host 启动时读取、校验并合并全部文件。字段与 PR 步骤见 [`catalog/README.md`](catalog/README.md)。
 
@@ -102,4 +102,4 @@ node --test test/*.test.js
 
 ## 状态
 
-`0.1.8` — 顶层「设置 → 预览市场」+ 发现/已安装两个 tab，同时保留「设置 → 插件」里的入口。目录改为 `catalog/plugins/` 下一插件一文件，支持预览插件和 `kind: "tool"` 的增强工具（如预览圈选），三方收录只需一个文件 PR。启用/停用走 dsh-market；一键安装要求对应包已进入所连接 dsh-market 的 registry，否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。
+`0.1.9` — 顶层「设置 → 预览市场」+ 发现/已安装两个 tab，同时保留「设置 → 插件」里的入口。目录改为 `catalog/plugins/` 下一插件一文件，支持预览插件和 `kind: "tool"` 的增强工具（如预览圈选），三方收录只需一个文件 PR。启用/停用走 dsh-market；一键安装要求对应包已进入所连接 dsh-market 的 registry，否则用可复制命令。配置仍在各子插件自己的 设置 → 插件 页面。

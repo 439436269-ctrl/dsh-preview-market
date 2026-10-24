@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9
+
+- Catalog follows dsh-preview-snip@0.3.0: desktop sidebar-browser capture.
+
 ## 0.1.8
 
 - Catalog follows `dsh-preview-snip@0.2.1` (image-only quick snip, segmented action group, hot-reload CSS fix).

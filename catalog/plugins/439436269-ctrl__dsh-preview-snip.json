@@ -4,11 +4,11 @@
   "capability": "snip",
   "kind": "tool",
   "repo": "https://github.com/439436269-ctrl/dsh-preview-snip",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "minDsh": "0.2.0-rc.2",
   "requires": [],
   "description": {
-    "zh": "图片/PDF/视频/3D/文本等所有预览的圈选；全能圈选支持方框、圆形、箭头、文字标注后再插入。",
-    "en": "Snip any preview (image/PDF/video/3D/text) and annotate with box, circle, arrow or text before inserting."
+    "zh": "图片/PDF/视频/3D/文本等预览的圈选与标注；桌面侧栏网页预览也支持圈选。",
+    "en": "Snip/annotate any preview and the desktop sidebar browser; image-only quick snip plus the annotation editor."
   }
 }

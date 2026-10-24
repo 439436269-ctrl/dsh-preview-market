@@ -103,12 +103,12 @@
       "capability": "snip",
       "kind": "tool",
       "repo": "https://github.com/439436269-ctrl/dsh-preview-snip",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "minDsh": "0.2.0-rc.2",
       "requires": [],
       "description": {
-        "zh": "图片/PDF 预览圈选截图，或引用选中文字，直接插入输入框。",
-        "en": "Circle an image/PDF preview region or quote selected text into the composer."
+        "zh": "图片/PDF/视频/3D/文本等所有预览的圈选；全能圈选支持方框、圆形、箭头、文字标注后再插入。",
+        "en": "Snip any preview (image/PDF/video/3D/text) and annotate with box, circle, arrow or text before inserting."
       },
       "extensions": [],
       "formats": {}

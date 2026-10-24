@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7
+
+- Catalog follows `dsh-preview-snip@0.2.0`: all preview types, plus the annotation editor (box/circle/arrow/text).
+
 ## 0.1.6
 
 - README: add preview-market and per-plugin screenshots, plus the current four-entry catalog list (media, Blender, STL, snip).

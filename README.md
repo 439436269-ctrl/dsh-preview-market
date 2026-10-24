@@ -70,7 +70,7 @@ A preview-header tool: drag a rectangle over an image/PDF to attach a PNG, or qu
 
 ![Preview snip](https://raw.githubusercontent.com/439436269-ctrl/dsh-preview-market/main/docs/preview-snip.png)
 
-## Catalog (0.1.9)
+## Catalog (0.1.10)
 
 Every plugin is **one file** under [`catalog/plugins/`](catalog/plugins/), named `<owner>__<repo>.json`. A third-party submission adds exactly one file plus the regenerated `catalog.json` snapshot — no market code change. The Host loads, validates and merges all files at startup; the format and PR steps are in [`catalog/README.md`](catalog/README.md).
 
@@ -128,4 +128,4 @@ The client bundle is `lib/client.js` (classic `__ModuleLoader__.load` factory, n
 
 ## Status
 
-`0.1.9` — top-level Settings → Preview market section with Discover / Installed tabs, plus the Settings → Plugins tab. The catalog is one file per plugin under `catalog/plugins/` (preview plugins and tool entries such as the preview snip), so third-party entries are a one-file PR. Enable/disable goes through dsh-market. One-click install requires the package in the connected dsh-market registry; otherwise use the copyable command. Configuration stays in each child plugin's own Settings → Plugins page.
+`0.1.10` — top-level Settings → Preview market section with Discover / Installed tabs, plus the Settings → Plugins tab. The catalog is one file per plugin under `catalog/plugins/` (preview plugins and tool entries such as the preview snip), so third-party entries are a one-file PR. Enable/disable goes through dsh-market. One-click install requires the package in the connected dsh-market registry; otherwise use the copyable command. Configuration stays in each child plugin's own Settings → Plugins page.

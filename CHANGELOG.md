@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.10
+
+- Fix the **Update** button doing nothing for an installed preview plugin: it now calls `/dsh-market/update` instead of `/dsh-market/install` (which rejects an already-installed package).
+- Compare versions numerically: the card offers Update only when the catalog version is newer than the installed one. An installed version equal to or newer than the catalog shows "Up to date" and the button is disabled, so a stale page no longer offers a downgrade.
+- After an update, the notice says the client needs a page refresh; the market itself is not restarted.
+
 ## 0.1.9
 
 - Catalog follows dsh-preview-snip@0.3.0: desktop sidebar-browser capture.

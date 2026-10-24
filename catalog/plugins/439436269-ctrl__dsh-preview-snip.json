@@ -4,7 +4,7 @@
   "capability": "snip",
   "kind": "tool",
   "repo": "https://github.com/439436269-ctrl/dsh-preview-snip",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "minDsh": "0.2.0-rc.2",
   "requires": [],
   "description": {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+
+- Catalog follows `dsh-preview-snip@0.2.1` (image-only quick snip, segmented action group, hot-reload CSS fix).
+
 ## 0.1.7
 
 - Catalog follows `dsh-preview-snip@0.2.0`: all preview types, plus the annotation editor (box/circle/arrow/text).

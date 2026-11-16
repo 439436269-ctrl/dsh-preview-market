@@ -4,7 +4,7 @@
   "capability": "image",
   "kind": "media",
   "repo": "https://github.com/VFVrPQ/dsh-preview-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minDsh": "0.2.0-rc.2",
   "requires": [],
   "extensions": [

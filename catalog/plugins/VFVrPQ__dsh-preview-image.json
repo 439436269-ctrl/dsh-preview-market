@@ -1,0 +1,40 @@
+{
+  "name": "dsh-preview-image",
+  "npm": "dsh-preview-image",
+  "capability": "image",
+  "kind": "media",
+  "repo": "https://github.com/VFVrPQ/dsh-preview-image",
+  "version": "0.1.1",
+  "minDsh": "0.2.0-rc.2",
+  "requires": [],
+  "extensions": [
+    "png",
+    "jpg",
+    "jpeg",
+    "jfif",
+    "gif",
+    "webp",
+    "avif",
+    "bmp",
+    "ico",
+    "svg"
+  ],
+  "formats": {
+    "image": [
+      "png",
+      "jpg",
+      "jpeg",
+      "jfif",
+      "gif",
+      "webp",
+      "avif",
+      "bmp",
+      "ico",
+      "svg"
+    ]
+  },
+  "description": {
+    "zh": "图片：右侧栏与对话大图都能自由缩放、拖动、旋转与全屏，透明背景可见，内置图片渲染器仍可切回。",
+    "en": "Images with real zoom, pan, rotation and full screen in the right-Sidebar preview and the conversation lightbox, over a transparency checkerboard."
+  }
+}

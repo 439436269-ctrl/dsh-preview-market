@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12
+
+- Catalog follows `dsh-preview-image@0.1.1` (image preview with zoom, pan, rotation and full screen) — the first third-party entry in the shipped catalog.
+
 ## 0.1.10
 
 - Fix the **Update** button doing nothing for an installed preview plugin: it now calls `/dsh-market/update` instead of `/dsh-market/install` (which rejects an already-installed package).
